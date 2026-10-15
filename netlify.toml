@@ -1,0 +1,10 @@
+# Site estático já compilado: não há etapa de build.
+[build]
+  publish = "."
+  command = ""
+
+# Qualquer rota cai no app (SPA).
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
