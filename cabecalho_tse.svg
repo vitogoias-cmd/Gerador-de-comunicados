@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 95" width="700" height="95">
+  <defs>
+    <linearGradient id="tseBgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#022a22" />
+      <stop offset="30%" stop-color="#04392f" />
+      <stop offset="65%" stop-color="#06483d" />
+      <stop offset="100%" stop-color="#01241d" />
+    </linearGradient>
+    <linearGradient id="tseCurveGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#001813" stop-opacity="0.6" />
+      <stop offset="50%" stop-color="#095447" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#001a14" stop-opacity="0.7" />
+    </linearGradient>
+    <linearGradient id="tseCurveGrad2" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#14b8a6" stop-opacity="0.15" />
+      <stop offset="50%" stop-color="#0d9488" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="#042f27" stop-opacity="0.3" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="700" height="95" fill="url(#tseBgGrad)" />
+
+  <!-- Organic Wave Lines / Contours -->
+  <path d="M-20,95 Q140,25 320,65 T720,20 L720,95 Z" fill="url(#tseCurveGrad1)" />
+  <path d="M-10,35 Q180,95 380,35 T720,80" fill="none" stroke="url(#tseCurveGrad2)" stroke-width="1.8" />
+  <path d="M-10,60 Q210,110 440,50 T720,90" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1.2" />
+  <path d="M60,-10 Q280,75 520,15 T720,40" fill="none" stroke="rgba(0,0,0,0.3)" stroke-width="2" />
+
+  <!-- Left Slogan: "Pensada por pessoas, projetada para o planeta." -->
+  <text x="42" y="44" fill="#ffffff" font-family="'Familjen Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="19" font-weight="600" letter-spacing="-0.2">Pensada por pessoas,</text>
+  <text x="42" y="69" fill="#ffffff" font-family="'Familjen Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="19" font-weight="700" letter-spacing="-0.2">projetada para o planeta.</text>
+
+  <!-- Right Logo: TSE Engenharia e Automação -->
+  <g transform="translate(525, 20)">
+    <!-- 'T' -->
+    <path d="M0,6 C0,2.5 2.5,0 6,0 L32,0 C35.5,0 38,2.5 38,6 L38,9 C38,10.5 36.8,11.7 35.3,11.7 L23,11.7 L23,32 C23,33.5 21.8,34.7 20.3,34.7 L17.7,34.7 C16.2,34.7 15,33.5 15,32 L15,11.7 L2.7,11.7 C1.2,11.7 0,10.5 0,9 Z" fill="#ffffff" />
+    
+    <!-- 'S' -->
+    <path d="M44,8 C44,3 48,0 54,0 L74,0 C80,0 84,3.5 84,9 L84,12 C84,13.5 82.8,14.7 81.3,14.7 L57,14.7 C55,14.7 54,15.5 54,17 C54,18.5 55,19.3 57,19.3 L74,19.3 C80.5,19.3 84.5,23 84.5,28.5 L84.5,31 C84.5,36.5 80.5,40 74,40 L53,40 C47,40 43,36.5 43,31 L43,28 C43,26.5 44.2,25.3 45.7,25.3 L70,25.3 C72,25.3 73,24.5 73,23 C73,21.5 72,20.7 70,20.7 L54,20.7 C47.5,20.7 44,17 44,11.5 Z" fill="#ffffff" transform="translate(0, -2.5) scale(0.88)" />
+    
+    <!-- 'E' -->
+    <g transform="translate(82, 0)">
+      <path d="M0,2.5 C0,1.1 1.1,0 2.5,0 L34,0 C35.4,0 36.5,1.1 36.5,2.5 L36.5,7 C36.5,8.4 35.4,9.5 34,9.5 L9.5,9.5 L9.5,12.5 L30,12.5 C31.4,12.5 32.5,13.6 32.5,15 L32.5,19.5 C32.5,20.9 31.4,22 30,22 L9.5,22 L9.5,25.2 L34,25.2 C35.4,25.2 36.5,26.3 36.5,27.7 L36.5,32.2 C36.5,33.6 35.4,34.7 34,34.7 L2.5,34.7 C1.1,34.7 0,33.6 0,32.2 Z" fill="#ffffff" />
+    </g>
+
+    <!-- Subtitle: ENGENHARIA E AUTOMAÇÃO -->
+    <text x="60" y="48" fill="#ffffff" font-family="'Familjen Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="7.5" font-weight="700" letter-spacing="2.8" text-anchor="middle">ENGENHARIA E AUTOMAÇÃO</text>
+  </g>
+</svg>
