@@ -1,0 +1,155 @@
+/*
+ * Tema escuro da moldura do programa (cabeçalho, barra lateral, barra de
+ * ferramentas e fundo da área de edição). O e-mail (#email-preview-wrapper)
+ * e os modais (.fixed.inset-0) não são alterados.
+ * Regras fora de @layer: vencem as utilidades do Tailwind sem !important.
+ */
+:root {
+  --ds-bg: #0b1120;
+  --ds-panel: #111827;
+  --ds-panel-2: #182133;
+  --ds-hover: #232d42;
+  --ds-border: #263045;
+  --ds-border-strong: #364156;
+  --ds-text: #e5e9f0;
+  --ds-text-2: #c3cad6;
+  --ds-muted: #94a0b4;
+  --ds-faint: #6b7588;
+  --ds-brand: #34d399;
+}
+
+body,
+.h-screen.w-screen {
+  background-color: var(--ds-bg);
+}
+
+/* Fundo ao redor do e-mail */
+main.bg-slate-200\/70 {
+  background-color: var(--ds-bg);
+  scrollbar-color: var(--ds-border-strong) transparent;
+}
+
+/* ---- Superfícies (cabeçalho, barra lateral, barra de ferramentas) ---- */
+:is(header, aside, main > div:first-child) {
+  color-scheme: dark;
+  color: var(--ds-text-2);
+  scrollbar-color: var(--ds-border-strong) transparent;
+}
+
+:is(header, aside, main > div:first-child):is(.bg-white, .bg-slate-100),
+:is(header, aside, main > div:first-child) :is(.bg-white, .bg-white\/60):not(.fixed *) {
+  background-color: var(--ds-panel);
+}
+
+:is(header, aside, main > div:first-child) :is(.bg-slate-50, .bg-slate-100, .bg-slate-200, .bg-slate-200\/80):not(.fixed *) {
+  background-color: var(--ds-panel-2);
+}
+
+:is(header, aside, main > div:first-child) :is(.hover\:bg-slate-50, .hover\:bg-slate-100, .hover\:bg-slate-100\/70, .hover\:bg-slate-200, .hover\:bg-slate-200\/60):hover:not(.fixed *) {
+  background-color: var(--ds-hover);
+}
+
+/* Botão de modo "escuro" selecionado no cabeçalho: destacar sobre o fundo escuro */
+header .bg-slate-900:not(.fixed *) {
+  background-color: #020617;
+  box-shadow: inset 0 0 0 1px var(--ds-border-strong);
+}
+
+/* ---- Bordas ---- */
+:is(header, aside, main > div:first-child):is(.border-slate-200),
+:is(header, aside, main > div:first-child) :is(.border-slate-100, .border-slate-200, .divide-slate-100 > *):not(.fixed *) {
+  border-color: var(--ds-border);
+}
+
+:is(header, aside, main > div:first-child) .border-slate-300:not(.fixed *),
+:is(header, aside, main > div:first-child) .bg-slate-200.w-px:not(.fixed *) {
+  border-color: var(--ds-border-strong);
+}
+
+:is(header, aside, main > div:first-child) .w-px.bg-slate-200:not(.fixed *) {
+  background-color: var(--ds-border-strong);
+}
+
+/* ---- Texto ---- */
+:is(header, aside, main > div:first-child) :is(.text-slate-900, .text-slate-800):not(.fixed *) {
+  color: var(--ds-text);
+}
+
+:is(header, aside, main > div:first-child) :is(.text-slate-700, .text-slate-600):not(.fixed *) {
+  color: var(--ds-text-2);
+}
+
+:is(header, aside, main > div:first-child) .text-slate-500:not(.fixed *) {
+  color: var(--ds-muted);
+}
+
+:is(header, aside, main > div:first-child) .text-slate-400:not(.fixed *) {
+  color: var(--ds-faint);
+}
+
+:is(header, aside, main > div:first-child) :is(.hover\:text-slate-900, .hover\:text-slate-700):hover:not(.fixed *) {
+  color: #fff;
+}
+
+:is(header, aside, main > div:first-child) :is(.text-\[\#06483d\], .hover\:text-\[\#06483d\]:hover, .hover\:text-\[\#03332b\]:hover):not(.fixed *),
+:is(header, aside, main > div:first-child) .group:hover .group-hover\:text-\[\#06483d\]:not(.fixed *) {
+  color: var(--ds-brand);
+}
+
+:is(header, aside, main > div:first-child) :is(.hover\:border-\[\#06483d\]:hover, .focus\:border-\[\#06483d\]:focus):not(.fixed *) {
+  border-color: var(--ds-brand);
+}
+
+/* ---- Tons de destaque claros -> versões translúcidas ---- */
+:is(header, aside, main > div:first-child) :is(.bg-emerald-50, .bg-emerald-50\/40, .bg-teal-50\/30, .bg-teal-100):not(.fixed *),
+:is(header, aside, main > div:first-child) :is(.hover\:bg-emerald-50, .hover\:bg-emerald-50\/30, .hover\:bg-emerald-50\/40, .hover\:bg-emerald-50\/50, .hover\:bg-emerald-100):hover:not(.fixed *) {
+  background-color: rgb(16 185 129 / 0.14);
+}
+
+:is(header, aside, main > div:first-child) :is(.bg-amber-50, .hover\:bg-amber-50:hover, .hover\:bg-amber-100:hover):not(.fixed *) {
+  background-color: rgb(245 158 11 / 0.14);
+}
+
+:is(header, aside, main > div:first-child) :is(.bg-violet-50, .hover\:bg-violet-100:hover):not(.fixed *) {
+  background-color: rgb(139 92 246 / 0.16);
+}
+
+:is(header, aside, main > div:first-child) :is(.bg-blue-50, .hover\:bg-blue-50:hover, .hover\:bg-blue-100:hover):not(.fixed *) {
+  background-color: rgb(59 130 246 / 0.16);
+}
+
+:is(header, aside, main > div:first-child) :is(.bg-rose-50, .hover\:bg-rose-50:hover, .hover\:bg-red-50:hover):not(.fixed *) {
+  background-color: rgb(244 63 94 / 0.16);
+}
+
+:is(header, aside, main > div:first-child) :is(.border-emerald-200, .border-teal-200):not(.fixed *) { border-color: rgb(16 185 129 / 0.35); }
+:is(header, aside, main > div:first-child) :is(.border-amber-200, .border-amber-300):not(.fixed *) { border-color: rgb(245 158 11 / 0.35); }
+:is(header, aside, main > div:first-child) .border-violet-200:not(.fixed *) { border-color: rgb(139 92 246 / 0.4); }
+:is(header, aside, main > div:first-child) .border-blue-200:not(.fixed *) { border-color: rgb(59 130 246 / 0.4); }
+:is(header, aside, main > div:first-child) .border-rose-200:not(.fixed *) { border-color: rgb(244 63 94 / 0.4); }
+
+:is(header, aside, main > div:first-child) :is(.text-emerald-600, .text-emerald-700, .text-emerald-800, .text-teal-600, .text-teal-700, .text-teal-800, .text-teal-900):not(.fixed *) { color: #6ee7b7; }
+:is(header, aside, main > div:first-child) :is(.text-amber-600, .text-amber-700, .text-amber-900, .hover\:text-amber-950:hover):not(.fixed *) { color: #fcd34d; }
+:is(header, aside, main > div:first-child) :is(.text-violet-600, .text-violet-800, .text-indigo-700):not(.fixed *) { color: #c4b5fd; }
+:is(header, aside, main > div:first-child) :is(.text-blue-600, .text-blue-700, .text-blue-800, .text-sky-600):not(.fixed *) { color: #93c5fd; }
+:is(header, aside, main > div:first-child) :is(.text-rose-600, .text-rose-700, .text-rose-800, .hover\:text-red-600:hover, .hover\:text-rose-600:hover):not(.fixed *) { color: #fda4af; }
+
+/* ---- Campos de formulário ---- */
+:is(header, aside, main > div:first-child) :is(input:not([type="checkbox"], [type="radio"], [type="range"], [type="color"]), select, textarea):not(.fixed *) {
+  background-color: var(--ds-panel-2);
+  color: var(--ds-text);
+}
+
+:is(header, aside, main > div:first-child) :is(input, textarea)::placeholder {
+  color: var(--ds-faint);
+}
+
+:is(header, aside, main > div:first-child) option {
+  background-color: var(--ds-panel);
+  color: var(--ds-text);
+}
+
+/* Sombras quase invisíveis no escuro: trocar por contorno sutil */
+header.shadow-xs {
+  box-shadow: 0 1px 0 var(--ds-border);
+}
